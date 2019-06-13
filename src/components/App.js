@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.css';
 
-const App = () => (
-  <div className="app">React Redux Tutorial for Beginners</div>
-);
+import Stories from './Stories';
+
+const App = () =>
+  <div className="app">
+    <Stories />
+  </div>
 
 export default App;
