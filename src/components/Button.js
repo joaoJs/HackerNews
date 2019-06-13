@@ -1,12 +1,7 @@
-import React from "react"
+import React from 'react';
 
-const Button = ({objectID, onArchive}) =>
-    <button
-          type="button"
-          className="button-inline"
-          onClick={() => onArchive(objectID)}
-        >
-          Archive
-    </button>
+const Button = props => {
+  return <button {...props} />;
+};
 
-export default Button
+export default Button;

@@ -1,16 +1,20 @@
 import React from 'react';
-import './App.css';
-
-import Stories from './Stories';
-import SearchStories from './SearchStories';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import './components/App.css';
+import Stories from './components/Stories';
+import SearchStories from './components/SearchStories';
+import store from './store';
 
 const App = () => (
-  <div className="app">
-    <div className="interactions">
-      <SearchStories />
+  <Provider store={store}>
+    <div className="app">
+      <div className="interactions">
+        <SearchStories />
+      </div>
+      <Stories />
     </div>
-    <Stories />
-  </div>
+  </Provider>
 );
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'));
